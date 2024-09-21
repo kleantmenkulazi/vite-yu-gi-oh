@@ -1,9 +1,8 @@
 <script>
-  // my-component.js
 export default {
   data() {
-    return {
-      message: 'Template Vite + Vue'
+    return { 
+      
     }
   }
 }
@@ -11,19 +10,21 @@ export default {
 
 <template>
   <header>
-    <h1>
-      {{ message }}
-    </h1>
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid d-flex justify-content-start">
+          <img src="" alt="YugyohLogo" class="pe-2">
+          <span class="navbar-brand mb-0 h1 fs-2">
+              Yu-Gi-Oh Api
+          </span>
+        </div>
+      </nav>
   </header>
 </template>
 
 <style scoped>
-header {
-  background-color: aquamarine;
-  text-align: center;
-  padding: 20px 0;
+
+img {
+    width: 150px;
 }
-h1 {
-  color: lightcoral;
-}
+
 </style>

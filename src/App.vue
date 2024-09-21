@@ -1,29 +1,29 @@
 <script>
-  /*
-  Per importare ed utilizzare un componente dentro ad un altro devo Sempre seguire questi 3 passi:
+/* 
+  Per importare ed utilizzare un componente dentro un altro devo SEMPRE seguire questi 3 passi:
   1) Importazione del componente
   2) Dichiarazione del componente
   3) Utilizzo del componente
-  */
-
-  // 1) Importazione del componente
- import AppHeader from './components/AppHeader.vue';
+*/
+// 1) Importazione del componente
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import AppCards from './components/AppCards.vue';
 
 export default {
   data() {
-    return {
-      count: 0
+    return { 
+     
     }
   },
   // 2) Dichiarazione del componente
   components: {
-    AppHeader
+    AppHeader,
+    AppMain,
+    AppCards
   },
-
   methods: {
-    incrementCount() {
-      this.count++;
-    }
+    
   }
 }
 </script>
@@ -31,17 +31,17 @@ export default {
 <template>
   <div>
     <!-- 3) Utilizzo del componente -->
-    <AppHeader/>
+    <AppHeader />
+    <AppMain />
+    <AppCards />
     <main>
-      <button @click="incrementCount()">
-        {{ count }}
-      </button>
+      
     </main>
   </div>
 </template>
 
-<style scoped>
-main {
-  text-align: center;
-}
+<style lang="scss">
+@use 'assets/scss/main' as *;
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
 </style>
